@@ -1,0 +1,5 @@
+package com.af.department.service;
+
+public enum DepartmentService {
+
+}

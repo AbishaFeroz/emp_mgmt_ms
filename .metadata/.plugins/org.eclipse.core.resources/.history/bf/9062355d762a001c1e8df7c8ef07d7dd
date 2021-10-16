@@ -1,0 +1,5 @@
+package com.af.department.repository;
+
+public class DepartmentRepository {
+
+}

@@ -1,0 +1,10 @@
+package com.af.department.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DepartmentController {
+	
+	@DepartmentService departmentService;
+
+}

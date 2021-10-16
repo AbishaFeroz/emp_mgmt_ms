@@ -1,0 +1,39 @@
+package com.af.department.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.af.department.entity.Department;
+import com.af.department.service.DepartmentService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+@RequestMapping("/departments")
+public class DepartmentController {
+	
+	@Autowired
+	DepartmentService departmentService;
+	
+	@PostMapping("/")
+	public Department save(@RequestBody Department department) {
+		System.out.println("hi")
+		departmentService.save(department);
+		return department;
+	}
+	
+	@PostMapping("/{id}")
+	public Department findDepartmentById(@PathVariable("id") Long id) {
+		
+		departmentService.findDepartmentById(id);
+		return null;
+		
+	}
+	
+
+}

@@ -1,0 +1,30 @@
+package com.af.department.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.af.department.entity.Department;
+import com.af.department.repository.DepartmentRepository;
+
+@Service
+public class DepartmentService {
+	
+	
+	@Autowired
+	private DepartmentRepository departmentRepository;
+
+	public void save(Department department) {
+		// TODO Auto-generated method stub
+		
+		departmentRepository.save(department);
+		
+	}
+
+	public void findDepartmentById(Long id) {
+		// TODO Auto-generated method stub
+		
+		departmentRepository.findDepartmentById(id)
+		
+	}
+
+}

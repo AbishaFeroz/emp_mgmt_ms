@@ -1,0 +1,12 @@
+package com.af.department.service;
+
+import org.springframework.stereotype.Service;
+
+import com.af.department.repository.DepartmentRepository;
+
+@Service
+public class DepartmentService {
+	
+	private DepartmentRepository departmentRepository;
+
+}
