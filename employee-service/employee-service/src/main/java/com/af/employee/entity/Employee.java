@@ -1,13 +1,11 @@
 package com.af.employee.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,6 +16,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+
     Long id;
     String name;
     String address;
@@ -28,7 +27,8 @@ public class Employee {
     Date joiningDate;
 
     int yearsOfExperience;
-
+    @OneToOne
+    @JoinColumn(name = "designation_id", referencedColumnName = "id")
     Designation designation;
 
 }

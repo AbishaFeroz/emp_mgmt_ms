@@ -36,11 +36,12 @@ public class DepartmentService {
 		return d;
 	}
 
-	public List<Department> findAll()   
+	public List<Department> findAll()
 	{  
-	List<Department> departments = new ArrayList<Department>();  
+	List<Department> departments = new ArrayList<Department>();
 	departmentRepository.findAll().forEach(dep -> departments.add(dep));  
-	return departments;  
+	return departments;
+
 	}  
 
 }

@@ -1,6 +1,7 @@
 package com.af.employee.repository;
 
-import com.af.employee.entity.Employee;
+import com.af.employee.entity.Designation;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class DesignationRepository extends JpaRepository<Designation, Long>{
+public interface DesignationRepository extends JpaRepository<Designation, Long> {
 }

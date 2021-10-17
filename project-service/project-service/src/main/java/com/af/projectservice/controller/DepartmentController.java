@@ -22,7 +22,6 @@ public class DepartmentController {
     public List<Department> fallbackListDepartments(){
         System.out.println("Fall back calleddddddddddddddd");
         List<Department> d = new ArrayList<Department>();
-
         return d;
     }
 

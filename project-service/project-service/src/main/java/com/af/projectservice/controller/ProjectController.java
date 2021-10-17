@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-@RequestMapping("/projects")
+@RequestMapping("/project")
 public class ProjectController {
 	
 	@Autowired
@@ -32,7 +32,7 @@ public class ProjectController {
 		
 	}
 	
-	@PostMapping("/")
+	@PostMapping("/save")
 	public Project save(@RequestBody Project project) {
 		log.info("In controller-Save");
 		System.out.println(project);

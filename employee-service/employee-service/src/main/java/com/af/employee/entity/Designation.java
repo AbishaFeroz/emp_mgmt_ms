@@ -1,5 +1,6 @@
 package com.af.employee.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +18,7 @@ public class Designation {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @JsonProperty("_id")
     Long id;
     String name;
 }

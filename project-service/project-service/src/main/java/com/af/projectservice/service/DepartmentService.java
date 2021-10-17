@@ -21,7 +21,7 @@ public class DepartmentService {
 
         List<Department> departments = new ArrayList<Department>();
 
-        ProjectDepartment projectDepartment =  restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/", ProjectDepartment.class);
+        ProjectDepartment projectDepartment =  restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/list", ProjectDepartment.class);
         log.info(""+projectDepartment.getDepartments());
         return projectDepartment.getDepartments();
 

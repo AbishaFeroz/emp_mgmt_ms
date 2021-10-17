@@ -28,6 +28,6 @@ public class Project {
 	Date startDate;
 	Date endDate;
 	
-	Department department;
+	Long departmentId;
 
 }
